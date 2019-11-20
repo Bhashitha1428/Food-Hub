@@ -1,0 +1,30 @@
+<div class="body">
+  <br><br><br>
+  <p style="font-family: 'Times New Roman'sans-serif; font-size:70px; font-weight: 500;color: rgb(247, 244, 244); text-align:center">Restaurant Owner Details</p>s
+  <div class="table-wrapper-scroll-y pl-5 pr-5">
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr bgcolor="rgb(255,165,0)">
+            <th scope="col" style="font-family: 'ZCOOL XiaoWei', sans-serif; font-weight:600; font-size: 32px ;text-align:center">Restaurant Name</th>
+            <th scope="col" style="font-family: 'ZCOOL XiaoWei', sans-serif; font-weight:600; font-size: 32px ;text-align:center">Owner Name</th>
+            <th scope="col" style="font-family: 'ZCOOL XiaoWei', sans-serif; font-weight:600; font-size: 32px ;text-align:center">Contact No</th>
+            <th scope="col" style="font-family: 'ZCOOL XiaoWei', sans-serif; font-weight:600; font-size: 32px ;text-align:center">Address</th>
+            <th scope="col" style="font-family: 'ZCOOL XiaoWei', sans-serif; font-weight:600; font-size: 32px ;text-align:center">Remove</th>
+          </tr>
+        </thead>
+        <tbody bgcolor="#C0C0C0">
+          <tr *ngFor="let restaurentowner of restaurentowners ">
+              <td scope="col" style="font-family: 'ZCOOL XiaoWei', sans-serif; padding-top: 30px;;text-align:center;font-weight:bold;" ><h3>{{ restaurentowner.restaurentname}}</h3></td>
+              <td scope="col" style="font-family: 'ZCOOL XiaoWei', sans-serif; padding-top: 30px;;text-align:center;font-weight:bold;"><h3>{{ restaurentowner.firstName}}</h3></td>
+              <td scope="col" style="font-family: 'ZCOOL XiaoWei', sans-serif; padding-top: 30px;;text-align:center;font-weight:bold;" ><h3>{{ restaurentowner.contactno}}</h3></td>
+              <td scope="col" style="font-family: 'ZCOOL XiaoWei', sans-serif; padding-top: 30px;;text-align:center;font-weight:bold;"><h3>{{ restaurentowner.address}}</h3></td>
+              <td scope="col" style="font-family: 'ZCOOL XiaoWei', sans-serif; padding-top: 30px;font-weight:500;text-align:center;font-weight:bold;"><button type="button" class="btn btn-dark" (click)="removeOwner(restaurentowner._id)" >Remove</button>
+            
+              </tr>
+        </tbody>
+      </table>
+      <button type="button" class="btn btn-secondary btn-sm btn-block" style="color:black;background-color:rgb(162, 240, 217);"(click)="customers()">View Customer Details</button>
+    </div>
+  </div>
+
+  
