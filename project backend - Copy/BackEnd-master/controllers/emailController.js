@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 
 
 function sendMessage(receiver, msg) {
-    const sender = 'webis1996@gmail.com';
+    const sender = 'restaurantbookingsys@gmail.com';
     const subject = 'Delete Food Hub account';
     
     const transporter = nodemailer.createTransport({
