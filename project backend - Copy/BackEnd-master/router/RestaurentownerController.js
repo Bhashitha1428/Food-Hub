@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
+const emailController=require('../controllers/emailController');
 
 require('../models/Restaurentowner');
 const Restaurentowner = mongoose.model('restaurentowners');
@@ -47,7 +48,10 @@ router.get('/',(req,res) =>{
     });
 }); 
 
-router.delete('/:id',(req,res) =>{
+router.delete('/:id/:email',(req,res) =>{
+ const receiverEmail=req.params.email;
+console.log(receiverEmail);
+emailController.sendMessage(receiverEmail,"Your Account was deleted");
 
     Restaurentowner.findByIdAndRemove(req.params.id, (err,doc)=>{
       if(!err){res.send(doc);}

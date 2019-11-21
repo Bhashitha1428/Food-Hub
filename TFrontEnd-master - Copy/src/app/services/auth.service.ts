@@ -50,7 +50,7 @@ export class AuthService {
     return this.http.delete('http://localhost:3000/api/customers/'+_id+"/"+email)
   }
 
-  removeOwner(_id){
-    return this.http.delete(`http://localhost:3000/api/restaurentowners/${_id}`)
+  removeOwner(_id,email){
+    return this.http.delete('http://localhost:3000/api/restaurentowners/'+_id+'/'+email)
 }
 }

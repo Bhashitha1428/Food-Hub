@@ -52,7 +52,7 @@ const receiverEmail=req.params.email;
 console.log(receiverEmail);
 emailController.sendMessage(receiverEmail,"Your Account was deleted");
 
-console.log("AAAAASS");
+
     Customer.findByIdAndRemove(req.params.id, (err,doc)=>{
       if(!err){res.send(doc);}
       else{ console.log('Error in table Delete :' +JSON.stringify(err,undefined,2));}

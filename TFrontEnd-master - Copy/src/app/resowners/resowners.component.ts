@@ -23,9 +23,9 @@ export class ResownersComponent implements OnInit {
       console.log('error is ', error)
   })
   }
-  removeOwner(_id){
+  removeOwner(_id,email){
     console.log(_id);
-    this.authService.removeOwner(_id)
+    this.authService.removeOwner(_id,email)
     .subscribe(res=>{
       console.log(res);
       window.location.reload();
